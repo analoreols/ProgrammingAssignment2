@@ -9,7 +9,9 @@
 ## their corresponding environments.
 
 
-## Write a short comment describing this function
+## In this function I set the value of the matrix, 
+## I get its value, I set the value of the inverse matrix,
+## and then I get its value.
 
 makeCacheMatrix <- function(x = matrix()) {
             m <- NULL
@@ -25,6 +27,10 @@ makeCacheMatrix <- function(x = matrix()) {
                  getInverse = getInverse)
 }
 
+## Here I compute "cacheSolve" through an "if" statement
+## to check whether the inverse matrix has already been calculated, 
+## if not it sets its value
+
 cacheSolve <- function(x, ...) {
          m <- x$getInverse()
          if(!is.null(m)){
@@ -36,8 +42,5 @@ cacheSolve <- function(x, ...) {
          x$setInverse(m)
          m
 }
-}
 
-
-## Write a short comment describing this function
 
